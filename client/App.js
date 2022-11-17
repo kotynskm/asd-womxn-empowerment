@@ -1,12 +1,22 @@
 import React from 'react';
+import { Router, Routes, Route } from 'react-router-dom'
+
 import './stylesheets/app.css';
 import Login from './components/Login'
+import Navbar from './components/Navbar';
+import Dashboard from './components/Dashboard';
+import About from './components/About'
+import Account from './components/Account';
 
 export default function App() {
   return (
     <div className="app">
-      <h1>App component is rendering</h1>
-      <Login />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/account" element={<Account />} />
+      </Routes>
     </div>
   );
 }
