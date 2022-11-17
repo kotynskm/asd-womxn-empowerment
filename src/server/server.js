@@ -10,6 +10,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 // save connection string to variable and replace password with one in env variables
 const DB = process.env.DATABASE.replace('<password>', process.env.PASSWORD);
+// const DB = process.env.MONGO
 
 // use mongoose connect to connect to the DB
 mongoose
