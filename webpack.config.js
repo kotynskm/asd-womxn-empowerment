@@ -1,9 +1,11 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require ('copy-webpack-plugin');
 
 module.exports = {
   context: __dirname,
-  entry: './client/index.js',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
@@ -17,7 +19,7 @@ module.exports = {
   devServer: {
     static: {
       publicPath: '/',
-      directory: path.join(__dirname, 'build'),
+      directory: path.join(__dirname, 'src'),
     },
     port: 8080,
 
@@ -32,7 +34,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.?js$/,
+        test:  /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -49,8 +51,26 @@ module.exports = {
     ],
   },
   plugins: [
+    //clean build folder
+    new CleanWebpackPlugin(),
+    //copy static assets from 'public' to 'build' folder
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: '**/*',
+          context: 'public',
+          filter: (resourcePath) => {
+            if (
+              resourcePath.slice(resourcePath.lastIndexOf('.html')) === '.html'
+            )
+            return false;
+            return true;
+          }
+        }
+      ]
+    }),
     new HtmlWebPackPlugin({
-      template: path.resolve(__dirname, 'client/index.html'),
+      template: path.resolve(__dirname, 'public/index.html'),
       filename: 'index.html',
     }),
   ],

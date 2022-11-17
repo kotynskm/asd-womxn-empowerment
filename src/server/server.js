@@ -22,19 +22,22 @@ const mongoose = require('mongoose');
 const app = require('./app');
 const port = 3000;
 
+
 //handle parsing request body
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // statically serve everything in the build folder on the route '/build'
-// app.use('/build', express.static(path.join(__dirname, './build')));
 
 // initial testing route
-app.get('/', (req, res) => {
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../../build/assets')));
+  app.get('/', (req, res) => {
   console.log('get homepage');
-  res.type('HTML').sendFile(path.resolve(__dirname, './build/index.html'));
+
+  res.type('HTML').sendFile(path.resolve(__dirname, '../../build/index.html'));
 });
-// });
+}
 
 //404 error for unknown routes
 app.use('*', (req, res) => res.status(404).send('Not Found'));
