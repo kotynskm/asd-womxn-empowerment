@@ -5,8 +5,8 @@ module.exports = {
   context: __dirname,
   entry: './client/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
+    path: path.resolve(__dirname, 'build'),
+    filename: 'bundle.js',
     publicPath: '/',
   },
   resolve: {
@@ -17,7 +17,7 @@ module.exports = {
   devServer: {
     static: {
       publicPath: '/',
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, 'build'),
     },
     port: 8080,
 
