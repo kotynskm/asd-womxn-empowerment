@@ -7,10 +7,18 @@ import ResourceCarousel from "../components/Dashboard Components/ResourceCarouse
 const Dashboard = () => {
 return (
   <>
-  <img src = "https://picsum.photos/800/300" />
-  <ResourceCarousel />
-  <DailyActivity />
-  <ActivityRating />
+    <div className="hero-img-wrapper"
+      style={{
+          display: "flex",
+          alignItems: "center",
+        }}
+    >
+      <img src="https://picsum.photos/800/300" alt="rotating tranquility placeholder img" />
+    </div>
+
+    <ResourceCarousel />
+    <DailyActivity />
+    <ActivityRating />
   </>
 )
 }
