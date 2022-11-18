@@ -5,7 +5,7 @@ import './Tab.css'
 const ActivityRating = () => {
   
   // Get these from DB when ready
-  const activities =
+  const activities = [
     {
       type: 'Self-care', 
       title: 'Diaphragmatic Breathing',
@@ -19,28 +19,36 @@ const ActivityRating = () => {
       ],
       citation: 'Cronkleton, E. (2019, April 9). 10 breathing exercises to try: For stress, training &amp; lung capacity. Healthline.', 
       link: 'https://www.healthline.com/health/breathing-exercise#belly-breathing'
-    };
+    }, 
+    {
+      type: 'Example Tab', 
+      title: '',
+      description: '',
+      howto: [],
+      citation: '', 
+      link: ''
+    }, 
+  ];
 
-  // Prep list of howTos based on comma seperated list in DB
-  const howTos = activities.howto.map((listItem) => <li>{listItem}</li>);
-  const type = activities.type; 
-
-  // function loadTabs(props) {
-  //   const tabDiv = activities.map(
-  //     (activity) =>
-  //       (<div label={activity.type}>
-  //         <div id='activityInfoContainer' >
-  //           <h3 id='activityTitle'>{activity.title}</h3>
-  //           <p id='activityDescription'>{activity.description}</p>
-  //           <ol id='activityHowTo'>{activity.howto}</ol>
-  //           <a id = 'activityLink' href={activity.link}><cite id="activityCitation">{activity.citation}</cite></a>
-  //         </div>
-  //         <form>{loadForm()}</form>
-  //       </div>)
-  //   ); 
-  //   const completedTabs = (<Tabs> {tabDiv} </Tabs>); 
-  //   return completedTabs; 
-  // }
+  function loadTabs(props) {
+    const tabDiv = activities.map(
+      function (activity) {
+        const howTos = activity.howto.map((listItem) => <li>{listItem}</li>);
+        var tabInfo = (
+          <div label={activity.type}>
+            <div id='activityInfoContainer' >
+              <h3 id='activityTitle'>{activity.title}</h3>
+              <p id='activityDescription'>{activity.description}</p>
+              <ol id='activityHowTo'>{howTos}</ol>
+              <a id = 'activityLink' href={activity.link}><cite id="activityCitation">{activity.citation}</cite></a>
+            </div>
+            <form>{loadForm()}</form>
+          </div>)
+        return tabInfo; 
+      }
+    );
+    return tabDiv;  
+  }
 
   function loadForm(props) {
     return (
@@ -88,16 +96,7 @@ const ActivityRating = () => {
   return (
     <>
       <Tabs>
-        <div label={type}>
-          <div id='activityInfoContainer' >
-            <h3 id='activityTitle'>{activities.title}</h3>
-            <p id='activityDescription'>{activities.description}</p>
-            <ol id='activityHowTo'>{howTos}</ol>
-            <a id = 'activityLink' href={activities.link}><cite id="activityCitation">{activities.citation}</cite></a>
-          </div>
-          <form>{loadForm()}</form>
-        </div>
-        <div label = "Example Tab"></div>
+        {loadTabs()}
       </Tabs>
     </>
   );
