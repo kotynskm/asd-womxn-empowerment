@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Dashboard from './components/Dashboard';
 import About from './components/About'
 import Account from './components/Account';
+import LandingPage from './components/LandingPage';
 
 
 export default function App() {
@@ -17,7 +18,7 @@ export default function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/about" element={<About />} />
         <Route path="/account" element={<Account />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<LandingPage />} />
       </Routes>
     </div>
   );
