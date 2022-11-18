@@ -1,33 +1,32 @@
-import { Label } from '@mui/icons-material';
+import { ConstructionOutlined, Label } from '@mui/icons-material';
 import React, { useState } from 'react'
 
 const Login = () => {
   
-  const handleLogin =(e)=>{
-    e.preventDefault()
-    console.log(e);
-
+  const handleLogin = async (e) => {
+    e.preventDefault();
     const loginObj = {
       name: e.target.form[0].value,
       password: e.target.form[1].value
+    };
+
+    try {
+      const response = await fetch('/login', 
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(loginObj)
+      });
+      const parsedResponse = await response.json();
+      console.log(parsedResponse);
+      const ssid = response.headers.get('set-cookie');
+      console.log(ssid);
+    } catch(error){
+      console.log('error in handleLogin fetch request:', error);
     }
-    console.log('login Obj----', loginObj)
-    //change to async/await
-    fetch('/login', {
-      method: 'POST', // or 'PUT'
-      headers: {
-      'Content-Type': 'application/json',
-       },
-       body: JSON.stringify(loginObj),  
-      })
-      .then((response) => response.json())
-      .then((data) => {
-      console.log('Success:', data);
-       })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
-  }
+  };
 
 
   const LoginForm = () => {
