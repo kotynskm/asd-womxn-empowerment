@@ -4,7 +4,7 @@ const express = require("express");
 const router = express.Router();
 const activityController = require("../controllers/activityController");
 
-//route to get all users from db
+//route to get all activities from db
 router.route("/activities").get(activityController.getAllActivities);
 
 // '/activity' endpoint in the server.js,
