@@ -1,64 +1,64 @@
-const db = require('../models/userModel')
+const db = require("../models/userModel");
 
 const userController = {};
 
 //find all users
+userController.getAllUsers = async (req, res, next) => {
+  const users = await db.find();
 
+  res.status(200).json({
+    status: "success",
+    data: {
+      users,
+    },
+  });
+};
 
 //create user
-//Regina did not test this yet! 
+//Regina did not test this yet!
 userController.createUser = (req, res, next) => {
   const { name, email, password } = req.body; //might need to add photo here
-  if (name == "" | email == "" | password == "") {
-     return next(
+  if ((name == "") | (email == "") | (password == "")) {
+    return next(
       createErr({
-        method: 'createUser',
-        type: 'missing info',
-        err: 'Missing Info',
+        method: "createUser",
+        type: "missing info",
+        err: "Missing Info",
       })
     );
   } else {
-    db.create(req.body)
-    .then((data)=>console.log(data));
+    db.create(req.body).then((data) => console.log(data));
   }
 };
 
 //verify user
 userController.verifyUser = (req, res, next) => {
-  console.log('in usercontroller verify user...req.body', req.body)
+  console.log("in usercontroller verify user...req.body", req.body);
   const { name, password } = req.body;
 
-  db
-    .findOne({name: name})
-    .then((data)=> {
+  db.findOne({ name: name })
+    .then((data) => {
       //returned data is the entire document
-  
+
       //check if passwords match
       //if do not match, send back error for wrong password
       //if match, create user session --- return next
       if (password !== doc.password) {
-        return next({ err: 'passwords do not match' });
+        return next({ err: "passwords do not match" });
       } else {
         res.locals.doc = data;
         return next();
-   } 
-         
+      }
     })
     .catch((error) => {
       return next(
-        'error in userController.verifyUser:' + JSON.stringify(error)
-        );
-      });
-      
-
-
-}
-
+        "error in userController.verifyUser:" + JSON.stringify(error)
+      );
+    });
+};
 
 //update userpw
 
-
 //delete user
-
 
 module.exports = userController;
