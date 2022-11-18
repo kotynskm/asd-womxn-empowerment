@@ -25,7 +25,10 @@
     "@mui/icons-material": "^5.10.14",
     "@mui/material": "^5.10.14",
     "@mui/styles": "^5.10.14",
+<<<<<<< HEAD
     "avataaars": "^2.0.0",
+=======
+>>>>>>> 6dbf890b0ea4ebfbaad0e1d4a6e096818919899b
     "clean-webpack-plugin": "^4.0.0",
     "concurrently": "^7.5.0",
     "cookie-parser": "^1.4.6",
@@ -43,7 +46,12 @@
     "react-material-ui-carousel": "^3.4.2",
     "react-router-dom": "^6.4.3",
     "style-loader": "^3.3.1",
+<<<<<<< HEAD
     "url-loader": "^4.1.1"
+=======
+    "url-loader": "^4.1.1",
+    "validator": "^13.7.0"
+>>>>>>> 6dbf890b0ea4ebfbaad0e1d4a6e096818919899b
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
