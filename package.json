@@ -25,6 +25,7 @@
     "@mui/icons-material": "^5.10.14",
     "@mui/material": "^5.10.14",
     "@mui/styles": "^5.10.14",
+    "avataaars": "^2.0.0",
     "clean-webpack-plugin": "^4.0.0",
     "concurrently": "^7.5.0",
     "cookie-parser": "^1.4.6",
