@@ -36,7 +36,6 @@ const ResourceCarousel = () => {
    return (
      <>
        <div id="resourceCarousel">
-         ResourceCarousel.js
          <Carousel>
            {items.map((item, i) => (
              <Item key={i} item={item} />
