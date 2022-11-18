@@ -21,9 +21,25 @@ const ActivityRating = () => {
       link: 'https://www.healthline.com/health/breathing-exercise#belly-breathing'
     }, 
     {
-      type: 'Example Tab', 
-      title: '',
-      description: '',
+      type: 'Community Building', 
+      title: 'Host a Game Night',
+      description: 'Bringing people together for a central activity is a wonderful way to build relationships. In addition, having a central and structured activity can help those with anxiety. There are in-person and virtual options for games nights. Choose whatever you are most comfortable with. Encourage others to dress up in some way for bonus points. Call up few close friends and get playing!',
+      howto: [],
+      citation: '', 
+      link: ''
+    }, 
+    {
+      type: 'Empowerment', 
+      title: 'Be Vulnerable',
+      description: 'Schedule a one-on-one conversation with someone you feel safe with. Tell them about a difficult experience you had recently. Reflect on what would help you the most. It can be a hug, kind words, encouraging thoughts, advice, or whatever you need. Advocate for what you need to your friend and enjoy the empowerment you feel when you ask for what you need from the people you love.',
+      howto: [],
+      citation: '', 
+      link: ''
+    }, 
+    {
+      type: 'Self-acceptance', 
+      title: 'Pursue a Childhood Passion',
+      description: 'Think back to when you were young. What were the activities and objects that you were most passionate about? Often, we give up on our childhood passions because we implicitly or explicitly hear that they are wrong or weird from peers and adults alike. When we get older, we tend to forget how much joy we can experience as humans if we follow our instincts and do the things we love regardless of perception. Pick your absolute favorite one and do! Right now!',
       howto: [],
       citation: '', 
       link: ''
