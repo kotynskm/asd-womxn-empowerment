@@ -10,11 +10,18 @@ const InterestCarousel = () => {
      {
        name: 'Item 1',
        image: img1,
+       link1: 'link1',
+       link2: 'link2',
+       link3: 'link3',
+       link4: 'link4'
      },
      {
        name: 'Item 2',
        image: img2,
-
+       link1: 'link1',
+       link2: 'link2',
+       link3: 'link3',
+       link4: 'link4'
      },
    ];
 
@@ -25,10 +32,10 @@ const InterestCarousel = () => {
          <p>{props.item.description}</p>
          <img src={props.item.image}></img>
          <br></br>
-         <a><button> Link </button></a>
-         <a><button> Link </button></a>
-         <a><button> Link </button></a>
-         <a><button> Link </button></a>
+         <a><button> {props.item.link1} </button></a>
+         <a><button> {props.item.link2} </button></a>
+         <a><button> {props.item.link3} </button></a>
+         <a><button> {props.item.link4} </button></a>
          <br></br>
        </Paper>
      );
