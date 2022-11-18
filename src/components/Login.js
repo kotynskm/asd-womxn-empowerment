@@ -8,7 +8,7 @@ const Login = () => {
     console.log(e);
 
     const loginObj = {
-      username: e.target.form[0].value,
+      name: e.target.form[0].value,
       password: e.target.form[1].value
     }
     console.log('login Obj----', loginObj)

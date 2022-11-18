@@ -1,10 +1,13 @@
 const express = require("express");
-
+const app = express();
+const morgan = require('morgan');
 // to access env variables
 const dotenv = require("dotenv");
 dotenv.config({ path: "./config.env" });
-
+const User = require('./models/userModel');
 const path = require("path");
+const authRouter = require('./routes/authRouter')
+
 
 // to connect to the DB
 const mongoose = require("mongoose");
@@ -13,18 +16,22 @@ const DB = process.env.DATABASE.replace("<password>", process.env.PASSWORD);
 
 // use mongoose connect to connect to the DB
 mongoose
-  .connect(DB)
-  .then(() => {
-    console.log("Connected to DB");
-  })
-  .catch((err) => console.log(err));
+.connect(DB)
+.then(() => {
+  console.log("Connected to DB");
+})
+.catch((err) => console.log(err));
 
-const app = require("./app");
 const port = 3000;
-
 //handle parsing request body
+app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+
+app.use('/login', authRouter, )
+
+
 
 // initial testing route
 if (process.env.NODE_ENV === "production") {
