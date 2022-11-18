@@ -1,4 +1,3 @@
-import { ConstructionOutlined, Label } from '@mui/icons-material';
 import React, { useState } from 'react'
 
 const Login = () => {
@@ -28,34 +27,26 @@ const Login = () => {
     }
   };
 
-
-  const LoginForm = () => {
-
     return (
       <>
         <form>
           <label>
-            {' '}
             Username
             <input type="text" />
           </label>
           <br></br>
-          <label> Password
-            <input type="password"></input>
+          <label>
+            Password
+            <input type="password" />
           </label>
           <br></br>
-          <input type="submit" onClick={(e) => handleLogin(e)}>Login</input>
+          <input type="submit" onClick={(e) => handleLogin(e)}></input>
         </form>
       </>
     );
   }
 
 
-  return (
-    <div className = "login">
-      <LoginForm />
-    </div>
-  )
-}
+
 
 export default Login;
