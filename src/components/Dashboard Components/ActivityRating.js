@@ -42,7 +42,7 @@ const ActivityRating = () => {
               <ol id='activityHowTo'>{howTos}</ol>
               <a id = 'activityLink' href={activity.link}><cite id="activityCitation">{activity.citation}</cite></a>
             </div>
-            <form>{loadForm()}</form>
+            {loadForm(activity.type)}
           </div>)
         return tabInfo; 
       }
@@ -52,44 +52,46 @@ const ActivityRating = () => {
 
   function loadForm(props) {
     return (
-      <div>
-        <br></br>
-        <input id='activityCompleted' type="checkbox"></input>
-        <label>Completed</label>
-        <br></br>
-        <br></br>
-        <label>
-          How did this activity make you feel?
-          <br></br>
-          <select id='activityRatingSelection'>
-            <option>Excited</option>
-            <option>Happy</option>
-            <option>Relaxed</option>
-            <option>Sad</option>
-            <option>Frustrated</option>
-            <option>Anxious</option>
-            <option>Other</option>
-          </select>
-        </label>
+      <form id={props}>
         <div>
           <br></br>
-          <label>Did this activity positively contribute to your personal growth or sense of wellbeing?</label>
+          <input id='activityCompleted' type="checkbox"></input>
+          <label>Completed</label>
           <br></br>
-          <input type="radio" id="yes" name="wellbeingRadio" value='yes'/>
-          <label for="yes">Yes</label>
-          <input type="radio" id="no" name="wellbeingRadio" value='no'/>
-          <label for="no">No</label>
+          <br></br>
+          <label>
+            How did this activity make you feel?
+            <br></br>
+            <select id='activityRatingSelection'>
+              <option>Excited</option>
+              <option>Happy</option>
+              <option>Relaxed</option>
+              <option>Sad</option>
+              <option>Frustrated</option>
+              <option>Anxious</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <div>
+            <br></br>
+            <label>Did this activity positively contribute to your personal growth or sense of wellbeing?</label>
+            <br></br>
+            <input type="radio" id="yes" name="wellbeingRadio" value='yes'/>
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="wellbeingRadio" value='no'/>
+            <label for="no">No</label>
+          </div>
+          <br></br>
+          <label>
+            Activity Journal Entry
+            <br></br>
+            <textarea id="activityNotes" name="activityNotes" rows="4" cols="30"></textarea>
+          </label>
+          <br></br>
+          <button type="submit" value="activitySubmit">Submit Activity</button>
+          <button type="reset" value="activityReset">Reset Activity</button>
         </div>
-        <br></br>
-        <label>
-          Activity Journal Entry
-          <br></br>
-          <textarea id="activityNotes" name="activityNotes" rows="4" cols="30"></textarea>
-        </label>
-        <br></br>
-        <button type="submit" value="activitySubmit">Submit Activity</button>
-        <button type="reset" value="activityReset">Reset Activity</button>
-      </div>
+      </form>
     )
   }
 
