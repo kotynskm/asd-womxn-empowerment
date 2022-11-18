@@ -29,7 +29,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-app.use('/login', authRouter, )
+app.use('/login', authRouter)
 
 
 
