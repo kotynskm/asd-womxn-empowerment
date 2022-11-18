@@ -2,6 +2,7 @@ import React from "react";
 import ActivityRating from "./Dashboard Components/ActivityRating";
 import DailyActivity from "./Dashboard Components/DailyAcitivity";
 import ResourceCarousel from "./Dashboard Components/ResourceCarousel";
+import Avatars from "./Avatars"
 
 const Dashboard = () => {
 return (
@@ -10,6 +11,7 @@ return (
   <ResourceCarousel />
   <DailyActivity />
   <ActivityRating />
+  <Avatars />
   </>
 )
 }
