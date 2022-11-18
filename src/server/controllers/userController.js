@@ -14,6 +14,18 @@ userController.getAllUsers = async (req, res, next) => {
   });
 };
 
+userController.getAllActivities = async (req, res, next) => {
+  const activities = await db
+    .find({ name: req.params.name })
+    .populate("activities");
+
+  res.status(200).json({
+    status: "success",
+    data: {
+      activities,
+    },
+  });
+};
 //create user
 //Regina did not test this yet!
 userController.createUser = (req, res, next) => {

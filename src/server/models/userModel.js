@@ -21,6 +21,12 @@ const userSchema = new Schema({
   photo: {
     type: String,
   },
+  activities: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Activity",
+    },
+  ],
 });
 
 // to add password validation and password confirmation?
