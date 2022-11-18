@@ -3,22 +3,20 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/account">Account</Link>
-        </li>
-        <li>
-          <Link to="/login">login</Link>
-        </li>
-      </ul>
-    </nav>
+    <div className="nav-grand-wrapper">
+      <div className="nav-wrapper">
+          <Link className="nav-link" to="/">Home</Link>
+
+          <Link className="nav-link" to="/about">About</Link>
+          
+          <Link className="nav-link" to="/account">Account</Link>
+      </div>
+      <div className="nav-profile-wrapper">
+        <div className="nav-profile-bubble">
+          {/* THIS IS YOUR AVATAR CIRCLE IN YOUR NAVBAR */}
+        </div>
+      </div>
+    </div>
   );
 }
 
