@@ -1,16 +1,24 @@
 import React from "react";
-import ActivityRating from "./Dashboard Components/ActivityRating";
-import DailyActivity from "./Dashboard Components/DailyAcitivity";
-import ResourceCarousel from "./Dashboard Components/ResourceCarousel";
+import ActivityRating from "../components/Dashboard Components/ActivityRating";
+import DailyActivity from "../components/Dashboard Components/DailyAcitivity";
+import ResourceCarousel from "../components/Dashboard Components/ResourceCarousel";
 
 
 const Dashboard = () => {
 return (
   <>
-  <img src = "https://picsum.photos/800/300" />
-  <ResourceCarousel />
-  <DailyActivity />
-  <ActivityRating />
+    <div className="hero-img-wrapper"
+      style={{
+          display: "flex",
+          alignItems: "center",
+        }}
+    >
+      <img src="https://picsum.photos/800/300" alt="rotating tranquility placeholder img" />
+    </div>
+
+    <ResourceCarousel />
+    <DailyActivity />
+    <ActivityRating />
   </>
 )
 }

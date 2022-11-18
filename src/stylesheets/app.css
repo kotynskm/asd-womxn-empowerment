@@ -4,3 +4,57 @@
   padding: 10px;
   margin: 10px;
 } */
+
+/* GLOBAL STYLING */
+
+body {
+  font-family: 'Sulphur Point', sans-serif;
+  background-color: #9FA2B2;
+  margin: 0;
+}
+
+/* NAVBAR STYLING */
+
+.nav-grand-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #FFFEFE;
+  width: 100%;
+  height: 6em;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+  padding: 2em 0em 1em 0em;
+}
+
+.nav-link {
+  color: #16262E;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.nav-profile-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 40%;
+}
+
+.nav-profile-bubble {
+  margin: 0.5em 1em 0em 0em;
+  border-radius: 100%;
+  width: 65px;
+  height: 65px;
+  background-color: #242038;
+  border-color: #8D86C9;
+  border: 1px solid;
+}
+
+/* HERO IMAGE / ROTATING ZEN PHOTO STYLING */
+
+.hero-img-wrapper {
+  margin: 5% 20% 5% 20%;
+}

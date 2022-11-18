@@ -1,7 +1,7 @@
 // https://avatars.dicebear.com/styles/avataaars
 
-import React from 'react'
-import Avatar from 'avataaars'
+import React from 'react';
+import Avatar from 'avataaars';
 
 class Avatars extends React.Component {
   render () {
