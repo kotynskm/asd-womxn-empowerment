@@ -8,7 +8,7 @@ const cookieController = require('../controllers/cookieController');
 
 //route to log in -> find and verify user pw --> create a session --> return session id and user info in the response
 router.post('/',userController.verifyUser,cookieController.setCookie, (req, res) => {
-  res.status(200).send("login successful")
+  res.status(200).json(res.locals.doc)
 })
 
 //route to log out
