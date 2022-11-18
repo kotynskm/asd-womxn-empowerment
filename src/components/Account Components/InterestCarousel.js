@@ -2,9 +2,8 @@ import React from 'react';
 import { ReactDOM } from 'react';
 import Carousel from 'react-material-ui-carousel';
 import { Paper, Button } from '@mui/material'
-import img1 from '../../public/assets/img1.jpg'
-import img2 from '../../public/assets/img2.jpg';
-
+import img1 from '../../../public/assets/img1.jpg'
+import img2 from '../../../public/assets/img2.jpg'
 
 const InterestCarousel = () => {
    var items = [
@@ -26,7 +25,10 @@ const InterestCarousel = () => {
          <p>{props.item.description}</p>
          <img src={props.item.image}></img>
          <br></br>
-         <Button className="CheckButton">Check it out!</Button>
+         <a><button> Link </button></a>
+         <a><button> Link </button></a>
+         <a><button> Link </button></a>
+         <a><button> Link </button></a>
          <br></br>
        </Paper>
      );
