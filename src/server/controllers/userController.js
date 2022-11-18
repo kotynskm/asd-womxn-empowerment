@@ -39,11 +39,12 @@ userController.verifyUser = (req, res, next) => {
   db.findOne({ name: name })
     .then((data) => {
       //returned data is the entire document
+      console.log(data);
 
       //check if passwords match
       //if do not match, send back error for wrong password
       //if match, create user session --- return next
-      if (password !== doc.password) {
+      if (password !== data.password) {
         return next({ err: "passwords do not match" });
       } else {
         res.locals.doc = data;
