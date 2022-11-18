@@ -2,21 +2,20 @@ import React from 'react';
 import { ReactDOM } from 'react';
 import Carousel from 'react-material-ui-carousel';
 import { Paper, Button } from '@mui/material'
-import img1 from '../../../public/assets/img1.jpg'
-import img2 from '../../../public/assets/img2.jpg';
+import img1 from '../../public/assets/img1.jpg'
+import img2 from '../../public/assets/img2.jpg';
 
 
-const ResourceCarousel = () => {
+const InterestCarousel = () => {
    var items = [
      {
        name: 'Item 1',
-       description: 'Narrative 1',
        image: img1,
      },
      {
        name: 'Item 2',
-       description: 'Narrative 2',
        image: img2,
+
      },
    ];
 
@@ -35,7 +34,7 @@ const ResourceCarousel = () => {
 
    return (
      <>
-       <div id="resourceCarousel">
+       <div id="interestCarousel">
          <Carousel>
            {items.map((item, i) => (
              <Item key={i} item={item} />
@@ -46,4 +45,4 @@ const ResourceCarousel = () => {
    );
 };
 
-export default ResourceCarousel;
+export default InterestCarousel;
