@@ -39,10 +39,12 @@ const Login = () => {
             Username
             <input type="text" />
           </label>
+          <br></br>
           <label> Password
             <input type="password"></input>
           </label>
-          <input type="submit" onClick={(e) => handleLogin(e)}></input>
+          <br></br>
+          <input type="submit" onClick={(e) => handleLogin(e)}>Login</input>
         </form>
       </>
     );
