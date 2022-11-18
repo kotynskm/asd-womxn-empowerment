@@ -1,6 +1,7 @@
 import React from 'react';
-import Avatars from './Avatars'; 
-import InterestCarousel from './InterestCarousel'
+import ProgressChart from './Account Components/ProgressChart';
+import Avatars from './Account Components/Avatars'; 
+import InterestCarousel from './Account Components/InterestCarousel'
 
 const Account = () => {
   return (
@@ -8,6 +9,7 @@ const Account = () => {
       <div id="account">Account.js</div>
       <Avatars />
       <InterestCarousel />
+      <ProgressChart />
     </>
   );
 };

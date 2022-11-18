@@ -49,7 +49,7 @@ const ActivityRating = () => {
   function loadTabs(props) {
     const tabDiv = activities.map(
       function (activity) {
-        const howTos = activity.howto.map((listItem) => <li>{listItem}</li>);
+        const howTos = activity.howto.map((listItem) => <li key={listItem}>{listItem}</li>);
         var tabInfo = (
           <div label={activity.type}>
             <div id='activityInfoContainer' >
@@ -93,9 +93,9 @@ const ActivityRating = () => {
             <label>Did this activity positively contribute to your personal growth or sense of wellbeing?</label>
             <br></br>
             <input type="radio" id="yes" name="wellbeingRadio" value='yes'/>
-            <label for="yes">Yes</label>
+            <label htmlFor="yes">Yes</label>
             <input type="radio" id="no" name="wellbeingRadio" value='no'/>
-            <label for="no">No</label>
+            <label htmlFor="no">No</label>
           </div>
           <br></br>
           <label>
