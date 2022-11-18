@@ -8,6 +8,7 @@ import Dashboard from './components/Dashboard';
 import About from './components/About'
 import Account from './components/Account';
 
+
 export default function App() {
   return (
     <div className="app">
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/about" element={<About />} />
         <Route path="/account" element={<Account />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );
