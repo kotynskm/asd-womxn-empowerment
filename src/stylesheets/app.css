@@ -1,10 +1,3 @@
-/* div {
-  border: 1px solid gray;
-  border-radius: 4px;
-  padding: 10px;
-  margin: 10px;
-} */
-
 /* GLOBAL STYLING */
 
 body {
@@ -60,4 +53,56 @@ body {
 
 .hero-img-wrapper {
   margin: 5% 20% 5% 20%;
+}
+
+.hero-img-wrapper img {
+  border: 1px solid #16262E;
+}
+
+/* CAROUSEL STYLING FOR MAIN PAGE / DASHBOARD */
+
+.carousel-card-wrapper {
+  padding: 20px;
+  width: 100%;
+}
+
+.carousel-interior-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel-img-wrapper {
+  width: 65%;
+}
+
+.carousel-img {
+  padding: 30px;
+  max-width: 500px;
+  max-height: 350px;
+}
+
+.card-description {
+  margin-top: 15px;
+  padding: 25px 30px 10px 10px;
+  /* width: 40%; */
+}
+
+/* ACCOUNT PAGE STYLING */
+
+.account-overview-grand-wrapper {
+  display: flex;
+  flex-direction: row;
+  /* width: 100%; */
+}
+
+.account-overview-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#username-head {
+  padding: 10px;
+  background-color: rgba(36, 32, 56, 0.5);
+  color: #F7ECE1;
+
 }
