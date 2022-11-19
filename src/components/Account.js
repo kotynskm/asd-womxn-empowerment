@@ -6,7 +6,8 @@ import InterestCarousel from './Account Components/InterestCarousel'
 const Account = () => {
   return (
     <>
-      <div id="account">Account.js</div>
+      <div id="account"></div>
+      <h3>Name (pronouns)</h3>
       <Avatars />
       <InterestCarousel />
       <ProgressChart />
