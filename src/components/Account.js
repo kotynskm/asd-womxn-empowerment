@@ -6,11 +6,18 @@ import InterestCarousel from './Account Components/InterestCarousel'
 const Account = () => {
   return (
     <>
-      <div id="account"></div>
-      <h3>Name (pronouns)</h3>
-      <Avatars />
-      <InterestCarousel />
-      <ProgressChart />
+      <div className="account-overview-grand-wrapper">
+        <div className="account-overview-wrapper">
+          <h3 id="username-head">username && (pronouns)</h3>
+          <Avatars />
+          <h3 id="chart-head">Progress Tracker</h3>
+          <ProgressChart />
+        </div>
+        <div className="account-overview-wrapper">
+          <h3 id="askme-head">Ask Me About...</h3>
+          <InterestCarousel />
+        </div>
+      </div>
     </>
   );
 };

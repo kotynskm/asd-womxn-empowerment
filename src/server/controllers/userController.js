@@ -2,7 +2,7 @@ const db = require("../models/userModel");
 
 const userController = {};
 
-//find all users
+//find all users in DB
 userController.getAllUsers = async (req, res, next) => {
   const users = await db.find();
 
@@ -14,9 +14,10 @@ userController.getAllUsers = async (req, res, next) => {
   });
 };
 
+//get activities associated with a user ID
 userController.getAllActivities = async (req, res, next) => {
   const activities = await db
-    .find({ name: req.params.name })
+    .find({ name: req.params.name }) //use "owner" instead? owner == userID? this doesn't seem like a deep enough query somehow
     .populate("activities");
 
   res.status(200).json({
@@ -26,6 +27,7 @@ userController.getAllActivities = async (req, res, next) => {
     },
   });
 };
+
 //create user
 //Regina did not test this yet!
 userController.createUser = (req, res, next) => {

@@ -1,10 +1,3 @@
-/* div {
-  border: 1px solid gray;
-  border-radius: 4px;
-  padding: 10px;
-  margin: 10px;
-} */
-
 /* GLOBAL STYLING */
 
 body {
@@ -13,7 +6,7 @@ body {
   margin: 0;
 }
 
-/* NAVBAR STYLING */
+/* GLOBAL NAVBAR STYLING */
 
 .nav-grand-wrapper {
   display: flex;
@@ -21,14 +14,14 @@ body {
   justify-content: space-between;
   background-color: #FFFEFE;
   width: 100%;
-  height: 6em;
+  height: 7em;
 }
 
 .nav-wrapper {
   display: flex;
   justify-content: space-around;
   width: 35%;
-  padding: 2em 0em 1em 0em;
+  padding: 3em 0em 1em 0em;
 }
 
 .nav-link {
@@ -40,8 +33,11 @@ body {
 .nav-profile-wrapper {
   display: flex;
   flex-direction: row-reverse;
+  margin-bottom: 5em;
   width: 40%;
 }
+
+/*former placeholder for avatar, now irrelevant, use if replacement or placeholder is needed:
 
 .nav-profile-bubble {
   margin: 0.5em 1em 0em 0em;
@@ -51,10 +47,89 @@ body {
   background-color: #242038;
   border-color: #8D86C9;
   border: 1px solid;
-}
+} */
 
-/* HERO IMAGE / ROTATING ZEN PHOTO STYLING */
+/* DASHBOARD / MAIN PAGE STYLING */
+/* HERO IMAGE / ROTATING ZEN PHOTO */
 
 .hero-img-wrapper {
   margin: 5% 20% 5% 20%;
+}
+
+.hero-img-wrapper img {
+  border: 1px solid #16262E;
+}
+
+/* DASHBOARD / MAIN DAILY ACTIVITY STYLING */
+/* Navigate to Tab.css, Tabs.js and Tab.js to find, update && || read */
+
+
+/* DASHBOARD / MAIN RESOURCE CAROUSEL STYLING */
+
+.carousel-card-wrapper {
+  padding: 20px;
+  width: 100%;
+}
+
+.carousel-interior-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel-img-wrapper {
+  width: 65%;
+}
+
+.carousel-img {
+  padding: 30px;
+  max-width: 500px;
+  max-height: 350px;
+  border-radius: 13px;
+  box-shadow: 4px 4px 8px rgba(36, 32, 56, 0.5);
+}
+
+.card-description-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-description {
+  margin-top: 15px;
+  padding: 10px 50px 10px 35px;
+  line-height: 1em;
+}
+
+
+
+/* ACCOUNT PAGE STYLING */
+
+.account-overview-grand-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.account-overview-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px; 
+}
+
+#username-head {
+  padding: 10px;
+  background-color: rgba(36, 32, 56, 0.5);
+  color: #F7ECE1;
+}
+
+#askme-head {
+  padding: 10px;
+  margin-left: 5px;
+  background-color: rgba(36, 32, 56, 0.5);
+  color: #F7ECE1;
+}
+
+#chart-head {
+  padding: 10px;
+  margin-left: 5px;
+  background-color: rgba(36, 32, 56, 0.5);
+  color: #F7ECE1;
 }
