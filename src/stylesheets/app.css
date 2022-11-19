@@ -6,7 +6,7 @@ body {
   margin: 0;
 }
 
-/* NAVBAR STYLING */
+/* GLOBAL NAVBAR STYLING */
 
 .nav-grand-wrapper {
   display: flex;
@@ -49,7 +49,8 @@ body {
   border: 1px solid;
 } */
 
-/* HERO IMAGE / ROTATING ZEN PHOTO STYLING */
+/* DASHBOARD / MAIN PAGE STYLING */
+/* HERO IMAGE / ROTATING ZEN PHOTO */
 
 .hero-img-wrapper {
   margin: 5% 20% 5% 20%;
@@ -59,7 +60,21 @@ body {
   border: 1px solid #16262E;
 }
 
-/* CAROUSEL STYLING FOR MAIN PAGE / DASHBOARD */
+/* DASHBOARD / MAIN DAILY ACTIVITY STYLING */
+
+.tabs {
+
+}
+
+.tabs-list {
+
+}
+
+.tabs-content {
+
+}
+
+/* DASHBOARD / MAIN RESOURCE CAROUSEL STYLING */
 
 .carousel-card-wrapper {
   padding: 20px;
@@ -93,6 +108,8 @@ body {
   padding: 10px 50px 10px 35px;
   line-height: 1em;
 }
+
+
 
 /* ACCOUNT PAGE STYLING */
 
