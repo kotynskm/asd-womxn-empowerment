@@ -1,5 +1,7 @@
+
 import React from "react";
 import { Link } from 'react-router-dom';
+import Avatars from './Account Components/Avatars'
 
 const Navbar = () => {
   return (
@@ -13,7 +15,7 @@ const Navbar = () => {
       </div>
       <div className="nav-profile-wrapper">
         <div className="nav-profile-bubble">
-          {/* THIS IS YOUR AVATAR CIRCLE IN YOUR NAVBAR */}
+          <Link className="nav-link" to="/account"><Avatars/></Link>
         </div>
       </div>
     </div>
