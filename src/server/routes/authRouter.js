@@ -6,7 +6,10 @@ const cookieController = require("../controllers/cookieController");
 
 //route to get all users from db
 router.route("/users").get(userController.getAllUsers);
+
+//route to get all activities by user ID from db
 router.route("/useractivity").get(userController.getAllActivities);
+
 //route to sign up -> userController to create a user -> then login
 router.post("/signup", userController.createUser, (req, res) => {
   res.status(200).json(res.locals.doc);
