@@ -104,11 +104,25 @@ body {
 .account-overview-wrapper {
   display: flex;
   flex-direction: column;
+  padding: 10px; 
 }
 
 #username-head {
   padding: 10px;
   background-color: rgba(36, 32, 56, 0.5);
   color: #F7ECE1;
+}
 
+#askme-head {
+  padding: 10px;
+  margin-left: 5px;
+  background-color: rgba(36, 32, 56, 0.5);
+  color: #F7ECE1;
+}
+
+#chart-head {
+  padding: 10px;
+  margin-left: 5px;
+  background-color: rgba(36, 32, 56, 0.5);
+  color: #F7ECE1;
 }
