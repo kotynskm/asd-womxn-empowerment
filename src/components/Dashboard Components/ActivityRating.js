@@ -1,6 +1,22 @@
 import React from 'react';
 import Tabs from './Tabs';
 import './Tab.css' 
+import {
+  Button,
+  ButtonGroup,
+  Card,
+  Checkbox,
+  FormControl,
+  FormControlLabel, 
+  FormLabel,
+  Grow,
+  InputLabel, Radio,
+  RadioGroup,
+  TextField,
+  Typography,
+} from '@mui/material';
+import RatingDropdownActivity from './RatingDropdown-Activity';
+import { Container } from '@mui/system';
 
 const ActivityRating = () => {
   
@@ -68,47 +84,71 @@ const ActivityRating = () => {
 
   function loadForm(props) {
     return (
-      <form id={props}>
-        <div>
-          <br></br>
-          <input id='activityCompleted' type="checkbox"></input>
-          <label>Completed</label>
-          <br></br>
-          <br></br>
-          <label>
-            How did this activity make you feel?
-            <br></br>
-            <select id='activityRatingSelection'>
-              <option>Excited</option>
-              <option>Happy</option>
-              <option>Relaxed</option>
-              <option>Sad</option>
-              <option>Frustrated</option>
-              <option>Anxious</option>
-              <option>Other</option>
-            </select>
-          </label>
-          <div>
-            <br></br>
-            <label>Did this activity positively contribute to your personal growth or sense of wellbeing?</label>
-            <br></br>
-            <input type="radio" id="yes" name="wellbeingRadio" value='yes'/>
-            <label htmlFor="yes">Yes</label>
-            <input type="radio" id="no" name="wellbeingRadio" value='no'/>
-            <label htmlFor="no">No</label>
-          </div>
-          <br></br>
-          <label>
-            Activity Journal Entry
-            <br></br>
-            <textarea id="activityNotes" name="activityNotes" rows="4" cols="30"></textarea>
-          </label>
-          <br></br>
-          <button type="submit" value="activitySubmit">Submit Activity</button>
-          <button type="reset" value="activityReset">Reset Activity</button>
-        </div>
-      </form>
-    )
+      <Card
+        variant="outline"
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+        <FormControl>
+          <form id={props}>
+            <div>
+              <FormControlLabel control={<Checkbox />} label="Completed" />
+              <RatingDropdownActivity />
+              <div>
+                <FormControl>
+                  <Typography mt={2} mb={1}>
+                    Did this activity positively contribute to your sense of
+                    wellbeing?
+                  </Typography>
+
+                  <RadioGroup
+                    row
+                    aria-labelledby="demo-row-radio-buttons-group-label"
+                    name="row-radio-buttons-group"
+                  >
+                    <FormControlLabel
+                      value="yes"
+                      control={<Radio />}
+                      label="Yes"
+                    />
+                    <FormControlLabel
+                      value="no"
+                      control={<Radio />}
+                      label="No"
+                    />
+                  </RadioGroup>
+                </FormControl>
+              </div>
+
+              <br></br>
+              <FormControl>
+                {/* <Typography mt={2} mb={1}>
+                  Activity Journal Entry
+                </Typography> */}
+                <TextField
+                  id="outlined-basic"
+                  label="Journal Entry"
+                  variant="outlined"
+                />
+              </FormControl>
+              <div style={{margin:'20px', align:'center'}}>
+                <ButtonGroup>
+                  <Button variant="outlined" size="medium" type="submit">
+                    Submit Activity
+                  </Button>
+                  <Button variant="outlined" size="medium" type="reset">
+                    Reset Activity
+                  </Button>
+                </ButtonGroup>
+              </div>
+            </div>
+          </form>
+        </FormControl>
+      </Card>
+    );
   }
 
   return (
