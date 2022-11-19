@@ -15,7 +15,7 @@ const Navbar = () => {
       </div>
       <div className="nav-profile-wrapper">
         <div className="nav-profile-bubble">
-          <Avatars/>
+          <Link className="nav-link" to="/account"><Avatars/></Link>
         </div>
       </div>
     </div>

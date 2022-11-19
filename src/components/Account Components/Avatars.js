@@ -8,7 +8,7 @@ class Avatars extends React.Component {
     return (
       <div>
         <Avatar
-          style={{width: '100px', height: '100px'}}
+          style={{width: '65px', height: '65px', margin: '1em'}}
           avatarStyle='Circle'
           topType='LongHairMiaWallace'
           accessoriesType='Prescription02'
