@@ -20,21 +20,32 @@ body {
 .nav-wrapper {
   display: flex;
   justify-content: space-around;
-  width: 35%;
+  width: 20%;
   padding: 3em 0em 1em 0em;
 }
 
 .nav-link {
   color: #16262E;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
+}
+
+.site-title-wrapper {
+  margin: 0.5em 2em 0em 8em;
+  padding-top: 0.5em;
 }
 
 .nav-profile-wrapper {
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: 5em;
-  width: 40%;
+  width: 30%;
+}
+
+/* SITE TITLE HEADER */
+
+h1 {
+  color: #16262E;
 }
 
 /*former placeholder for avatar, now irrelevant, use if replacement or placeholder is needed:
@@ -59,10 +70,6 @@ body {
 .hero-img-wrapper img {
   border: 1px solid #16262E;
 }
-
-/* DASHBOARD / MAIN DAILY ACTIVITY STYLING */
-/* Navigate to Tab.css, Tabs.js and Tab.js to find, update && || read */
-
 
 /* DASHBOARD / MAIN RESOURCE CAROUSEL STYLING */
 
@@ -99,7 +106,30 @@ body {
   line-height: 1em;
 }
 
+/* DASHBOARD / MAIN DAILY ACTIVITY STYLING */
+/* Navigate to Tab.css, Tabs.js and Tab.js to find, update && || read more details */
 
+/* .card-test-styling {
+  background-color: #9FA2B2;
+} */
+
+.activity-section-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 20px;
+  background-color: #9FA2B2;
+}
+
+#activityInfoContainer {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+}
+
+.card-journal-head {
+  padding-top: 20px;
+}
 
 /* ACCOUNT PAGE STYLING */
 

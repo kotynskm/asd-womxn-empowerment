@@ -68,17 +68,17 @@ const ActivityRating = () => {
       function (activity) {
         const howTos = activity.howto.map((listItem) => <li key={listItem}>{listItem}</li>);
         var tabInfo = (
-          <div label={activity.type}>
-            <div id='activityInfoContainer'>
-              <Paper elevation={3} style={{width: '50%', margin:'2em', padding:'1em'}}>
-                <h3 id='activityTitle'>{activity.title}</h3>
-                <p id='activityDescription'>{activity.description}</p>
-                <ol id='activityHowTo'>{howTos}</ol>
-                <a id = 'activityLink' href={activity.link}><cite id="activityCitation">{activity.citation}</cite></a>
-              </Paper>
-              {loadForm(activity.type)}
-            </div>
-          </div>)
+            <div label={activity.type}>
+              <div id='activityInfoContainer' >
+                <Paper style={{width: '50%', margin:'2em', padding:'1em', boxShadow: "2px 2px 13px",}}>
+                  <h3 id='activityTitle'>{activity.title}</h3>
+                  <p id='activityDescription'>{activity.description}</p>
+                  <ol id='activityHowTo'>{howTos}</ol>
+                  <a id = 'activityLink' href={activity.link}><cite id="activityCitation">{activity.citation}</cite></a>
+                </Paper>
+                {loadForm(activity.type)}
+              </div>
+            </div>)
         return tabInfo; 
       }
     );
@@ -89,16 +89,21 @@ const ActivityRating = () => {
     return (
       <Card
         variant="outline"
+        elevation={3}
+        // className="card-test-styling"
         sx={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
+          width: "40%",
+          boxShadow: "2px 2px 13px",
         }}
       >
         <FormControl>
 
           <form id={props}>
             <div>
+              <h3 className="card-journal-head">How'd it go? Journal about it!</h3>
               <FormControlLabel control={<Checkbox />} label="Completed" />
               <RatingDropdownActivity />
               <div>
@@ -138,7 +143,7 @@ const ActivityRating = () => {
                   variant="outlined"
                 />
               </FormControl>
-              <div style={{margin:'20px', align:'center'}}>
+              <div style={{padding: "15px 0px", align:'center'}}>
                 <ButtonGroup>
                   <Button variant="outlined" size="medium" type="submit">
                     Submit Activity
