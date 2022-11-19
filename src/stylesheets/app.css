@@ -21,7 +21,7 @@ body {
   justify-content: space-between;
   background-color: #FFFEFE;
   width: 100%;
-  height: 6em;
+  height: 7em;
 }
 
 .nav-wrapper {
@@ -40,8 +40,11 @@ body {
 .nav-profile-wrapper {
   display: flex;
   flex-direction: row-reverse;
+  margin-bottom: 5em;
   width: 40%;
 }
+
+/*former placeholder for avatar, now irrelevant
 
 .nav-profile-bubble {
   margin: 0.5em 1em 0em 0em;
@@ -51,7 +54,7 @@ body {
   background-color: #242038;
   border-color: #8D86C9;
   border: 1px solid;
-}
+} */
 
 /* HERO IMAGE / ROTATING ZEN PHOTO STYLING */
 
