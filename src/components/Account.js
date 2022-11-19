@@ -7,15 +7,15 @@ const Account = () => {
   return (
     <>
       <div className="account-overview-grand-wrapper">
-        <div className="account-overview-wrapper">
-          <h3 id="username-head">username && (pronouns)</h3>
+        <div className="account-overview-wrapper" style={{width:'50%', marginLeft:'auto', marginRight:'auto', padding:'2em'}}>
+          <h3 id="username-head">Grace Hopper (She/Her)</h3> 
           <Avatars />
           <h3 id="chart-head">Progress Tracker</h3>
           <ProgressChart />
         </div>
-        <div className="account-overview-wrapper">
+        <div className="account-overview-wrapper" style={{width:'50%', marginLeft:'auto', marginRight:'auto', padding:'2em'}}>
           <h3 id="askme-head">Ask Me About...</h3>
-          <InterestCarousel />
+          <div style={{margin:'auto'}}><InterestCarousel /></div>
         </div>
       </div>
     </>
