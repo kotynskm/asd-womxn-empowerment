@@ -14,6 +14,7 @@ import {
   RadioGroup,
   TextField,
   Typography,
+  Paper
 } from '@mui/material';
 import RatingDropdownActivity from './RatingDropdown-Activity';
 import { Container } from '@mui/system';
@@ -68,13 +69,15 @@ const ActivityRating = () => {
         const howTos = activity.howto.map((listItem) => <li key={listItem}>{listItem}</li>);
         var tabInfo = (
           <div label={activity.type}>
-            <div id='activityInfoContainer' >
-              <h3 id='activityTitle'>{activity.title}</h3>
-              <p id='activityDescription'>{activity.description}</p>
-              <ol id='activityHowTo'>{howTos}</ol>
-              <a id = 'activityLink' href={activity.link}><cite id="activityCitation">{activity.citation}</cite></a>
+            <div id='activityInfoContainer'>
+              <Paper elevation={3} style={{width: '50%', margin:'2em', padding:'1em'}}>
+                <h3 id='activityTitle'>{activity.title}</h3>
+                <p id='activityDescription'>{activity.description}</p>
+                <ol id='activityHowTo'>{howTos}</ol>
+                <a id = 'activityLink' href={activity.link}><cite id="activityCitation">{activity.citation}</cite></a>
+              </Paper>
+              {loadForm(activity.type)}
             </div>
-            {loadForm(activity.type)}
           </div>)
         return tabInfo; 
       }
@@ -93,6 +96,7 @@ const ActivityRating = () => {
         }}
       >
         <FormControl>
+
           <form id={props}>
             <div>
               <FormControlLabel control={<Checkbox />} label="Completed" />
