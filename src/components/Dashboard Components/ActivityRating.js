@@ -100,6 +100,7 @@ const ActivityRating = () => {
         }}
       >
         <FormControl>
+
           <form id={props}>
             <div>
               <h3 className="card-journal-head">How'd it go? Journal about it!</h3>
