@@ -13,6 +13,7 @@ const Navbar = () => {
           
           <Link className="nav-link" to="/account">Account</Link>
       </div>
+      <div className="site-title-wrapper"><h1>ASD Womxn Empowerment</h1></div>
       <div className="nav-profile-wrapper">
         <div className="nav-profile-bubble">
           <Link className="nav-link" to="/account"><Avatars/></Link>
