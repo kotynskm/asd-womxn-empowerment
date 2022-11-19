@@ -83,10 +83,15 @@ body {
   box-shadow: 4px 4px 8px rgba(36, 32, 56, 0.5);
 }
 
+.card-description-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .card-description {
   margin-top: 15px;
   padding: 10px 50px 10px 35px;
-  /* width: 40%; */
+  line-height: 1.2em;
 }
 
 /* ACCOUNT PAGE STYLING */
@@ -94,7 +99,6 @@ body {
 .account-overview-grand-wrapper {
   display: flex;
   flex-direction: row;
-  /* width: 100%; */
 }
 
 .account-overview-wrapper {
