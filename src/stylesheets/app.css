@@ -28,7 +28,7 @@ body {
   display: flex;
   justify-content: space-around;
   width: 35%;
-  padding: 2em 0em 1em 0em;
+  padding: 3em 0em 1em 0em;
 }
 
 .nav-link {
