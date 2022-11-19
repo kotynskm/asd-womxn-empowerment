@@ -6,7 +6,7 @@ body {
   margin: 0;
 }
 
-/* NAVBAR STYLING */
+/* GLOBAL NAVBAR STYLING */
 
 .nav-grand-wrapper {
   display: flex;
@@ -37,7 +37,7 @@ body {
   width: 40%;
 }
 
-/*former placeholder for avatar, now irrelevant
+/*former placeholder for avatar, now irrelevant, use if replacement or placeholder is needed:
 
 .nav-profile-bubble {
   margin: 0.5em 1em 0em 0em;
@@ -49,7 +49,8 @@ body {
   border: 1px solid;
 } */
 
-/* HERO IMAGE / ROTATING ZEN PHOTO STYLING */
+/* DASHBOARD / MAIN PAGE STYLING */
+/* HERO IMAGE / ROTATING ZEN PHOTO */
 
 .hero-img-wrapper {
   margin: 5% 20% 5% 20%;
@@ -59,7 +60,11 @@ body {
   border: 1px solid #16262E;
 }
 
-/* CAROUSEL STYLING FOR MAIN PAGE / DASHBOARD */
+/* DASHBOARD / MAIN DAILY ACTIVITY STYLING */
+/* Navigate to Tab.css, Tabs.js and Tab.js to find, update && || read */
+
+
+/* DASHBOARD / MAIN RESOURCE CAROUSEL STYLING */
 
 .carousel-card-wrapper {
   padding: 20px;
@@ -83,11 +88,18 @@ body {
   box-shadow: 4px 4px 8px rgba(36, 32, 56, 0.5);
 }
 
+.card-description-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .card-description {
   margin-top: 15px;
   padding: 10px 50px 10px 35px;
-  /* width: 40%; */
+  line-height: 1em;
 }
+
+
 
 /* ACCOUNT PAGE STYLING */
 

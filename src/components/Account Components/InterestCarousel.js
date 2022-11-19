@@ -8,31 +8,31 @@ import Telescope from '../../../public/assets/Telescope.jpg'
 import WonderWoman from '../../../public/assets/WonderWoman.jpg'
 
 const InterestCarousel = () => {
-   var items = [
-     {
-       name: 'James Webb Telescope',
-       image: Telescope,
-       link1: 'https://webbtelescope.org/',
-     },
-     {
-       name: 'Fancy Rats',
-       image: FancyRate,
-       link1: 'https://www.nfrs.org/'
-     },
-     {
-      name: 'Paleontology',
-      image: Dinosaur,
-      link1: 'https://www.britannica.com/science/paleontology',
-    },
-    {
-      name: 'Wonder Woman',
-      image: WonderWoman,
-      link1: 'https://dc.fandom.com/wiki/Wonder_Woman_(Diana_Prince)'
-    },
-   ];
+    var items = [
+      {
+        name: 'James Webb Telescope',
+        image: Telescope,
+        link1: 'https://webbtelescope.org/',
+      },
+      {
+        name: 'Fancy Rats',
+        image: FancyRate,
+        link1: 'https://www.nfrs.org/'
+      },
+      {
+        name: 'Paleontology',
+        image: Dinosaur,
+        link1: 'https://www.britannica.com/science/paleontology',
+      },
+      {
+        name: 'Wonder Woman',
+        image: WonderWoman,
+        link1: 'https://dc.fandom.com/wiki/Wonder_Woman_(Diana_Prince)'
+      },
+    ];
 
-   function Item(props) {
-     return (
+  function Item(props) {
+    return (
       <div>
         <Card sx={{ maxWidth: 500 }}>
           <CardActionArea>
@@ -55,20 +55,20 @@ const InterestCarousel = () => {
           </CardActions>
         </Card>
       </div>
-     );
-   }
+    );
+  }
 
-   return (
-     <>
-       <div id="interestCarousel" style={{width:"500px"}}>
-         <Carousel>
-           {items.map((item, i) => (
-             <Item key={i} item={item} />
-           ))}
-         </Carousel>
-       </div>
-     </>
-   );
+  return (
+    <>
+      <div id="interestCarousel" style={{width:"500px"}}>
+        <Carousel>
+          {items.map((item, i) => (
+            <Item key={i} item={item} />
+          ))}
+        </Carousel>
+      </div>
+    </>
+  );
 };
 
 export default InterestCarousel;
