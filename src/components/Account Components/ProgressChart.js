@@ -9,8 +9,8 @@ const data = {
   datasets: [
     {
       label: "Activities Completed",
-      backgroundColor: "rgb(255, 99, 132)",
-      borderColor: "rgb(255, 99, 132)",
+      backgroundColor: "#FFFEFE",
+      borderColor: "#FFFEFE",
       data: [1, 0, 2, 1, 3],
     },
   ],
@@ -18,7 +18,7 @@ const data = {
 
 const ProgressChart = () => {
   return (
-    <div style={{width:'30%'}}>
+    <div>
       <Line data={data} />
     </div>
   );
