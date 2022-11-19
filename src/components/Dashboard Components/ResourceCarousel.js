@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactDOM } from 'react';
 import Carousel from 'react-material-ui-carousel';
-import { Paper, Button } from '@mui/material'
+import { Paper, Button, Grid, Item } from '@mui/material'
 import asan from '../../../public/assets/ASAN-logo.png'
 import awn from '../../../public/assets/AWN-Logo.png';
 import unmasking from '../../../public/assets/Unmasking.jpg'
@@ -58,6 +58,31 @@ const ResourceCarousel = () => {
       </Paper>
     );
   }
+
+//Carousel alternative
+   //function Item(props) {
+     //return (
+      //<div style={{margin:'0em 4em'}}>
+        //<Paper elevation={3} style={{padding:'2em', height:'18em'}}>
+          //<Grid container spacing={2} columns={16}>
+            //<Grid xs={1}></Grid>
+            //<Grid xs={5}>
+                //<div style={{height:"300px", alignItems:"center", display:"flex", justifyContent:"center"}}>
+                  //<img style={{maxWidth:"100%", maxHeight:"100%"}} src={props.item.image}></img>
+                //</div>
+            //</Grid>
+            //<Grid xs={1}></Grid>
+            //<Grid xs={8}>
+                //<h2>{props.item.name}</h2>
+                //<p><cite>"{props.item.description}"</cite></p>
+                //<Button variant="contained" className="CheckButton" href={props.item.link}>Check it out!</Button>
+            //</Grid>
+            //<Grid xs={1}></Grid>
+          //</Grid>
+        //</Paper>
+        //</div>
+     //);
+   //}
 
   return (
     <>
