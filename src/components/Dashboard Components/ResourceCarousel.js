@@ -43,7 +43,7 @@ const ResourceCarousel = () => {
          <p><cite>"{props.item.description}"</cite></p>
          <img src={props.item.image}></img>
          <br></br>
-         <a href={props.item.link}><Button className="CheckButton">Check it out!</Button></a>
+         <a  target="_blank" href={props.item.link}><Button className="CheckButton">Check it out!</Button></a>
          <br></br>
        </Paper>
      );
