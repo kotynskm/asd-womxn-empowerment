@@ -37,7 +37,7 @@ body {
   width: 40%;
 }
 
-/*former placeholder for avatar, now irrelevant
+/*former placeholder for avatar, now irrelevant, use if replacement or placeholder is needed:
 
 .nav-profile-bubble {
   margin: 0.5em 1em 0em 0em;
@@ -91,7 +91,7 @@ body {
 .card-description {
   margin-top: 15px;
   padding: 10px 50px 10px 35px;
-  line-height: 1.2em;
+  line-height: 1em;
 }
 
 /* ACCOUNT PAGE STYLING */
