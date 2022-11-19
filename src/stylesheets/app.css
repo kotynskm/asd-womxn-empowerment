@@ -79,11 +79,13 @@ body {
   padding: 30px;
   max-width: 500px;
   max-height: 350px;
+  border-radius: 13px;
+  box-shadow: 4px 4px 8px rgba(36, 32, 56, 0.5);
 }
 
 .card-description {
   margin-top: 15px;
-  padding: 25px 30px 10px 10px;
+  padding: 10px 50px 10px 35px;
   /* width: 40%; */
 }
 

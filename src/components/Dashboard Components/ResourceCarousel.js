@@ -29,7 +29,7 @@ const ResourceCarousel = () => {
       link: 'https://awnnetwork.org/'
     },
     {
-      name: '',
+      name: 'Autistic Women & Nonbinary Network (continued)',
       description: 'I am a Black, queer, disabled, and non-binary individual. This is quite an interesting intersection to live at and one that I feel is important to discuss. I have multiple disabilities, autism being one of them. I am often asked to speak on disability since I am a disabled scientist, as well as a disabled activist. Within this article, I plan to expand on the topic of race and autism from both points of view by delivering data and statistics, as well as discussing the societal factors and experiences that impact those of us living at this unique intersection.I will focus on diagnostic disparities as a way of inviting readers to broader conversations on intersections of disability and race.',
       image: intersections,
       link: 'https://awnnetwork.org/the-intersections-of-race-and-autism-diagnostic-disparities-and-marginalized-existence/'
