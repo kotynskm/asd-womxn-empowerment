@@ -1,10 +1,3 @@
-/* div {
-  border: 1px solid gray;
-  border-radius: 4px;
-  padding: 10px;
-  margin: 10px;
-} */
-
 /* GLOBAL STYLING */
 
 body {
@@ -21,14 +14,14 @@ body {
   justify-content: space-between;
   background-color: #FFFEFE;
   width: 100%;
-  height: 6em;
+  height: 7em;
 }
 
 .nav-wrapper {
   display: flex;
   justify-content: space-around;
   width: 35%;
-  padding: 2em 0em 1em 0em;
+  padding: 3em 0em 1em 0em;
 }
 
 .nav-link {
@@ -40,8 +33,11 @@ body {
 .nav-profile-wrapper {
   display: flex;
   flex-direction: row-reverse;
+  margin-bottom: 5em;
   width: 40%;
 }
+
+/*former placeholder for avatar, now irrelevant
 
 .nav-profile-bubble {
   margin: 0.5em 1em 0em 0em;
@@ -51,10 +47,64 @@ body {
   background-color: #242038;
   border-color: #8D86C9;
   border: 1px solid;
-}
+} */
 
 /* HERO IMAGE / ROTATING ZEN PHOTO STYLING */
 
 .hero-img-wrapper {
   margin: 5% 20% 5% 20%;
+}
+
+.hero-img-wrapper img {
+  border: 1px solid #16262E;
+}
+
+/* CAROUSEL STYLING FOR MAIN PAGE / DASHBOARD */
+
+.carousel-card-wrapper {
+  padding: 20px;
+  width: 100%;
+}
+
+.carousel-interior-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel-img-wrapper {
+  width: 65%;
+}
+
+.carousel-img {
+  padding: 30px;
+  max-width: 500px;
+  max-height: 350px;
+  border-radius: 13px;
+  box-shadow: 4px 4px 8px rgba(36, 32, 56, 0.5);
+}
+
+.card-description {
+  margin-top: 15px;
+  padding: 10px 50px 10px 35px;
+  /* width: 40%; */
+}
+
+/* ACCOUNT PAGE STYLING */
+
+.account-overview-grand-wrapper {
+  display: flex;
+  flex-direction: row;
+  /* width: 100%; */
+}
+
+.account-overview-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#username-head {
+  padding: 10px;
+  background-color: rgba(36, 32, 56, 0.5);
+  color: #F7ECE1;
+
 }
