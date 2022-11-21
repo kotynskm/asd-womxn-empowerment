@@ -33,8 +33,8 @@ const InterestCarousel = () => {
 
   function Item(props) {
     return (
-      <div>
-        <Card sx={{ maxWidth: 500 }}>
+      <div style={{width:'100%'}}>
+        <Card sx={{ maxWidth: '100%' }}>
           <CardActionArea>
             <CardMedia
               component="img"

@@ -37,52 +37,54 @@ const ResourceCarousel = () => {
     },
   ];
 
-  function Item(props) {
-    return (
-      <Paper className="carousel-card">
-        <div className="carousel-card-wrapper">
-            <h2>{props.item.name}</h2>
-            <div className="carousel-interior-wrapper">
-              <div className="carousel-img-wrapper">
-                <img className="carousel-img" src={props.item.image}></img>
-              </div>
-              <div className="card-description-wrapper">
-                <p className="card-description"><cite>{props.item.description}</cite></p>
-                <p className="card-description">{props.item.descriptionElaborated}</p>
-              </div>
-            </div>
-            <br></br>
-            <a target="_blank" href={props.item.link}><Button className="CheckButton">Check it out!</Button></a>
-          <br></br>
-        </div>
-      </Paper>
-    );
-  }
+  // function Item(props) {
+  //   return (
+  //     <Paper className="carousel-card">
+  //       <div className="carousel-card-wrapper">
+  //           <h2>{props.item.name}</h2>
+  //           <div className="carousel-interior-wrapper">
+  //             <div className="carousel-img-wrapper">
+  //               <img className="carousel-img" src={props.item.image}></img>
+  //             </div>
+  //             <div className="card-description-wrapper">
+  //               <p className="card-description"><cite>{props.item.description}</cite></p>
+  //               <p className="card-description">{props.item.descriptionElaborated}</p>
+  //               <div style={{paddingLeft:'2em'}}>
+  //                 <Button style={{width: '10em', }} target="_blank" variant="contained" className="CheckButton" href={props.item.link}>Check it out!</Button>
+  //               </div>             
+  //             </div>
+  //           </div>
+  //           <br></br>
+
+  //       </div>
+  //     </Paper>
+  //   );
+  // }
 
 //Carousel alternative
-  //  function Item(props) {
-  //    return (
-  //     <div style={{margin:'0em 4em'}}>
-  //       <Paper elevation={3} style={{padding:'2em', height:'18em'}}>
-  //         <Grid container spacing={2} columns={16}>
-  //           <Grid xs={1}></Grid>
-  //           <Grid xs={5}>
-  //               <div style={{height:"300px", alignItems:"center", display:"flex", justifyContent:"center"}}>
-  //                 <img style={{maxWidth:"100%", maxHeight:"100%"}} src={props.item.image}></img>
-  //               </div>
-  //           </Grid>
-  //           <Grid xs={1}></Grid>
-  //           <Grid xs={8}>
-  //               <h2>{props.item.name}</h2>
-  //               <p><cite>"{props.item.description}"</cite></p>
-  //               <Button variant="contained" className="CheckButton" href={props.item.link}>Check it out!</Button>
-  //           </Grid>
-  //           <Grid xs={1}></Grid>
-  //         </Grid>
-  //       </Paper>
-  //       </div>
-  //    );
-  //  }
+   function Item(props) {
+     return (
+      <div style={{margin:'0em 4em'}}>
+        <Paper elevation={3} style={{padding:'2em', height:'18em'}}>
+          <Grid container spacing={2} columns={16}>
+            <Grid xs={1}></Grid>
+            <Grid xs={5}>
+                <div style={{height:"300px", alignItems:"center", display:"flex", justifyContent:"center"}}>
+                  <img class="carousel-img" style={{maxWidth:"100%", maxHeight:"80%"}} src={props.item.image}></img>
+                </div>
+            </Grid>
+            <Grid xs={1}></Grid>
+            <Grid xs={8}>
+                <h2>{props.item.name}</h2>
+                <p><cite>"{props.item.description}"</cite></p>
+                <Button target="_blank" variant="contained" className="CheckButton" href={props.item.link}>Learn More</Button>
+            </Grid>
+            <Grid xs={1}></Grid>
+          </Grid>
+        </Paper>
+        </div>
+     );
+   }
 
   return (
     <>
