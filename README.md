@@ -1,84 +1,66 @@
-# Travel Book
+<img src="/public/assets/asdbanner.png">
+<div align='center'>
 
-<img src="./public/assets/badge.png">
+# ASD Womxn Empowerment
+
+**Tech Stack:** JavaScript, Node.js, Express.js, HTML, CSS, MongoDB, mongoose, Git, GitHub
 
 ---
 
-# Project Overview
-
-Travel Book is a fullstack itinerary application for planning and organizing trips. The user can create trips, add activities, notes, photos, and friends to their trip. Furthermore, the user can view and schedule their activities on a calendar, as well as view the weather in the city where they are traveling to assist them in planning their itinerary.
-
-View demo site here: http://35.90.45.98/
-
-## Technologies
-
-**Languages:** Python, JavaScript (AJAX, JSON), HTML, CSS, SQL  
-**Frameworks & Libraries:** Flask, jQuery, Bootstrap, Jinja, SQLAlchemy ORM  
-**Database & Industry Tools:** PostgreSQL, Git, GitHub, Command Line
-**APIs:** Google Maps, Yelp Fusion, OpenWeather, Cloudinary
-
-# <a name="about"></a>Learn More About the Developer
-
-**GitHub:** https://github.com/kotynskm/travel-book  
-**LinkedIn:** https://www.linkedin.com/in/kkotynski
-**Medium:** https://medium.com/@k.kotynski
-
 # Table of Contents
 
-- [About the Developer](#about)
-- [Features](#features)
-- [Installation](#installation)
-- [References](#references)
+[Project Overview](#overview)
+[Features](#features)
+[About the Team](#about)
 
-## <a name="features"></a>Features
+---
 
-#### Create a trip/view trips
+# <a name="overview"></a> <div align='center'>Project Overview</div>
 
-<img src="/static/img/homepage.png" align="right" width="50%">
-<img src="/static/img/homepage-map.png" align="right" width="50%">
-A user can create a trip, view trips/invited trips on the homepage. A google map with markers for each trip is displayed on the page using the Google Maps API, JavaScript and geolocation. When the user creates a new trip, the information from the form is sent to the server as a POST request, and the trip cards are displayed on the page using React.
+<p align="center">
+<img src="/public/assets/badge.png" width='200px'>
+</p>
 
-#### Plan itinerary
+The ASD Womxn Empowerment app was developed for Girl Development Hackathon 2022 and won the "Best Theme - or Most on Point Hackathon" award.
 
-<img src="/static/img/tripitinerarycards.png" align="right" width="50%">
-<img src="/static/img/activities.png" align="right" width="50%">
-<img src="/static/img/calendar.png" align="right" width="50%">
-A user can select/search top rated activities which populates results using the Yelp Fusion API. A google map with info markers for each activity selected is displayed on the page. The user can navigate to the calendar page to schedule activities. This feature was implemented using FullCalendar and JavaScript. The user may also upload photos. This feature was implemented using the Cloudinary API and BootStrap to create a photo carousel. The user may also check the daily and upcoming weather. This feature was implemented using the OpenWeather API and geolocation. Additional features include adding notes to the trip, which may be used for airline/hotel information, or reminders. The user may also invite friends to their trip, and invited users will be able to view the trip details.
+Autism is highly misunderstood and therefore stigmatized. Often people think of a rain man or Sheldon type character: male and either completely brilliant or completely unable to complete daily tasks. Unfortunately, the research, community, and resources reflect this bias toward boys and men. Autistic womxn and non-binary individuals are left out of the conversation. This leads to intense isolation and a decline in mental health and wellbeing. In addition, the suicide rate in this population is alarmingly high at 34%.
 
-## <a name="installation"></a>Installation
+This all paints a grim picture of what it means to be autistic, but let me paint a new one for you. Autistic womxn and non-binary people have so much to give to not only their own communities but also to our global community. They have contributed to some of the greatest technological and artistic innovations of our species, as well as being valued, loving, and loyal members of the families they choose. Temple Grandin, a prominent autistic advocate likes to point out that "without autism, we wouldn't have electricity". We can only gain by creating inclusive spaces for neurodiversity.
 
-To run Travel Book on your local machine:
+That brings us to our app. Mental health and wellbeing are a prerequisite for truly authentic participation, contribution, and self-advocacy within any community. It is imperitive that Autistic Womxn & Nonbinary Individuals have a designated and consistent place to go when they feel like they are from another world. Our app creates a safe space for autistic womxn and nonbinary individuals to improve their wellbeing through community, acceptance, self-expression & identity, and empowerment.
 
-Clone this repo:
+## <a name="features"></a> Features
 
-```
-https://github.com/kotynskm/travel-book.git
-```
+The core features of our app are presented in a single dashboard view, providing a simple user interface with everything accessible in one place. The first feature the user encounters is a random image that generates every time the app is opened. The purpose of the image to create a calm and relaxing environment.
 
-Create and activate a virtual environment inside your Travel Book directory:
+<img src="/public/assets/dash.png">
 
-```
-virtualenv env (Mac OS)
-virtualenv env --always-copy (Windows OS)
-source env/bin/activate
-```
+#### Daily Resource
 
-Install the dependencies:
+The Daily Resource component of the app delivers information relevant to autism, highlighting recent news, research, and inspiring stories about autistic and neurodiverse people.
 
-```
-pip3 install -r requirements.txt
-```
+#### Daily Activity
 
-Set up the database:
+The Daily Activity component suggest and activity for the user to participate in, promoting general wellness. There are 4 categories that the user would be able to set preferences for, and the app generates a daily activity for the user to complete. As the user completes an activity, they can rate and reflect on their experience to keep track of their progress.
 
-```
-createdb travel_book
-```
+#### Profile Page
 
-Run the app:
+The profile page was created to help build a community, where users can connect with others in the community and share information about themselves. On this page, users will also find a visual representation of their activity trackers so they can easily see all they have accomplished.
 
-```
-python3 server.py
-```
+<img src="/public/assets/profile.png">
 
-You can now navigate to 'localhost:5000/' to use Travel Book!
+# <a name="about"></a>Learn More About the Developers
+
+Regina Kwan | <a href="https://github.com/rkwan53">GitHub</a> | <a href="https://www.linkedin.com/in/reginakwan/">LinkedIn</a>
+
+Kailey Kotynski | <a href="https://github.com/kotynskm">GitHub</a> | <a href="https://www.linkedin.com/in/kkotynski/">LinkedIn</a>
+
+Katherine Adams | <a href="https://github.com/kaadams1">GitHub</a> | <a href="https://www.linkedin.com/in/katherineaadams/">LinkedIn</a>
+
+Emma Crawford | <a href="https://github.com/ecraw24">GitHub</a> | <a href="https://www.linkedin.com/in/ecrawford24/">LinkedIn</a>
+
+Nocturne AC | <a href="https://github.com/NocturneAC">GitHub</a> | <a href="https://www.linkedin.com/in/nocturne-ac-4231b3215/">LinkedIn</a>
+
+Yoola Kim | <a href="https://www.linkedin.com/in/yoolakim/">LinkedIn</a>
+
+</div>
